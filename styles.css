@@ -1,0 +1,243 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+#nav {
+  padding: 10px 20px;
+  backdrop-filter: blur(5px); /* Adds a frosted glass effect */
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures navbar stays on top */
+  background-color: #121212a9; /* Solid background for overlap clarity */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+}
+
+.navbar-collapse {
+  background-color: #121212ad; /* Matches the navbar's color */
+  backdrop-filter: blur(5px); /* Adds a frosted glass effect */
+  z-index: 1001; /* Ensure dropdown is above the cards */
+  position: relative;
+}
+
+
+#nav .navbar-nav .nav-item .nav-link {
+  color: #eee;
+  transition: color 0.3s ease;
+  font-family: monospace;
+  font-size: 1.2em;
+  transition: 0.3s;
+}
+
+#nav .navbar-nav .nav-item .nav-link:hover {
+  color: #0f0;
+  font-size: 1.4em;
+  transition: 0.3s;
+}
+
+#nav .navbar-brand {
+  font-size: 2em;
+  text-shadow: 0 0 5px rgb(255, 255, 255);
+  font-family: monospace;
+  color: #eee;
+}
+
+#nav .navbar-brand:hover {
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0;
+  transition: color 0.2s;
+}
+
+.dropdown-item {
+  color: #eee !important;
+}
+
+.dropdown-item:hover {
+  background-color: #2b2b2b;
+  color: #0f0 !important;
+}
+
+/* card */
+
+.card {
+  width: 320px;
+  height: 350px;
+  padding: 20px;
+  color: white;
+  background: transparent;
+  border: 2px solid lime;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transform-origin: center center;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card .main-content {
+  flex: 1;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.card .heading {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.card .footer {
+  font-weight: 400;
+  margin-right: 4px;
+}
+
+.card:hover {
+  color: black;
+  border-radius: 12px;
+  background-color: lime;
+  scale: 0.95;
+  rotate: 8deg;
+  box-shadow: 0px 3px 187.5px 7.5px rgba(96, 246, 89, 0.4);
+}
+
+.footer {
+  padding-top: 20px;
+  text-align: center;
+  flex-direction: row !important;
+}
+
+.footer .fa {
+  text-decoration: none;
+  color: whitesmoke;
+  margin: 0 10px;
+  font-size: 1.5em;
+  transition: 0.2s;
+  filter: drop-shadow(0px 0px 5px rgb(245, 244, 244));
+}
+
+.footer .fa:hover {
+  color: #0f0;
+  font-size: 2em;
+  transition: 0.2s;
+  filter: drop-shadow(0px 0px 5px #0f0);
+}
+
+footer {
+  text-align: center;
+  font-family: monospace;
+  padding: 10px 0;
+}
+
+
+
+/* Responsive Styles */
+
+@media (max-width: 1200px) {
+  .card {
+    width: 280px;
+    height: 320px;
+  }
+
+  .card .heading {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 992px) {
+  .card {
+    width: 240px;
+    height: 280px;
+  }
+
+  .card .heading {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    height: auto;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  #nav {
+    padding: 15px;
+  }
+
+  .navbar-collapse {
+    position: absolute; /* Ensure dropdown doesn't overlap the cards */
+    top: 100%; /* Position below the navbar */
+    left: 0;
+    width: 100%;
+  }
+
+  
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: 100%;
+    height: auto;
+  }
+
+  .card .heading {
+    font-size: 20px;
+  }
+
+  #nav .navbar-brand {
+    font-size: 1.2em;
+  }
+
+  #nav .navbar-nav .nav-item .nav-link {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 400px) {
+  .card {
+    width: 100%;
+    height: auto;
+  }
+
+  .card .heading {
+    font-size: 18px;
+  }
+
+  #nav .navbar-brand {
+    font-size: 1em;
+  }
+
+  #nav .navbar-nav .nav-item .nav-link {
+    font-size: 0.8em;
+  }
+}
