@@ -252,3 +252,42 @@ footer {
     font-size: 0.8em;
   }
 }
+
+
+
+/* Custom Fonts */
+
+@font-face {
+  font-family: bionical;
+  src: url(/fonts/BionicalDemo-8MJ5A.ttf);
+}
+
+@font-face {
+  font-family: lines;
+  src: url(/fonts/Exwayer-X3eqa.ttf);
+}
+
+@font-face {
+  font-family: glitch;
+  src: url(/fonts/GlitchGoblin-2O87v.ttf);
+}
+
+@font-face {
+  font-family: android;
+  src: url(/fonts/Android.ttf);
+}
+
+@font-face {
+  font-family: mincraft;
+  src: url(/fonts//mincraft/MinecraftBold-nMK1.otf);
+}
+
+@font-face {
+  font-family: problem;
+  src: url(/fonts/mincraft/Minecraftchmc-dBlX.ttf);
+}
+
+@font-face {
+  font-family: hindi;
+  src: url(/fonts/SAMAN___.ttf);
+}
